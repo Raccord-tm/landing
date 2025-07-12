@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TÍTULO DE LA PÁGINA: Optimizado para SEO y marca -->
+    <title>Agencia de Marketing Digital de Alto Impacto - Raccord™</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script>
+        // Configuración personalizada para Tailwind CSS
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'corporate-red': '#ca0b0b',
+                        'premium-dark': '#111827', // Gris oscuro, casi negro
+                        'premium-gold': '#d4af37',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg-hero {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        .gradient-text-red {
+            background: linear-gradient(135deg, #ef4444, #ca0b0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800; /* Más grueso para mayor impacto */
+            line-height: 1.2;
+        }
+        .plan-card, .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .plan-card:hover, .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+        .gamification-bg {
+            background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
+        }
+        .table-check { color: #22c55e; }
+        .table-cross { color: #ef4444; }
+        [x-cloak] { display: none !important; }
+        .step-active {
+            background-color: #ca0b0b;
+            color: white;
+        }
+        .step-inactive {
+            background-color: #e5e7eb;
+            color: #4b5563;
+        }
+        /* ESTILOS PARA VIDEO RESPONSIVE */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden; /* Asegura que el contenido se recorte a las esquinas redondeadas */
+        }
+        .video-wrapper > div,
+        .video-wrapper > iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Contenedor Principal -->
+    <div class="max-w-screen-xl mx-auto bg-white shadow-2xl">
+
+        <!-- Header -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-2xl font-extrabold text-gray-900">
+                    Raccord™
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#servicios" class="text-gray-600 hover:text-corporate-red transition font-medium">Servicios</a>
+                    <a href="#quienes-somos" class="text-gray-600 hover:text-corporate-red transition font-medium">Quiénes Somos</a>
+                    <a href="#planes" class="text-gray-600 hover:text-corporate-red transition font-medium">Planes</a>
+                    <a href="#personaliza" class="text-gray-600 hover:text-corporate-red transition font-medium">Personaliza</a>
+                    <a href="#gamificacion" class="text-gray-600 hover:text-corporate-red transition font-medium">Beneficios</a>
+                    <!-- CONTACTO: Enlace de WhatsApp para escritorio -->
+                    <a href="https://wa.me/573196807176?text=Hola,%20estoy%20interesado%20en%20los%20servicios%20de%20Raccord." target="_blank" class="bg-corporate-red text-white px-5 py-2 rounded-full hover:bg-red-800 transition shadow-lg hover:shadow-xl font-semibold">Contactar</a>
+                </div>
+                <div class="md:hidden">
+                    <!-- Menú móvil (opcional) -->
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sección Hero -->
+        <section class="gradient-bg-hero text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <div class="bg-black/20 backdrop-blur-lg p-8 rounded-2xl max-w-4xl mx-auto border border-gray-700">
+                    <h1 class="text-sm font-bold uppercase tracking-widest text-gray-400">Marketing Digital de Alto Impacto</h1>
+                    <p class="text-4xl md:text-6xl font-extrabold mt-4 leading-tight">Transformamos tu Presencia Digital en <span class="gradient-text-red">Resultados Tangibles</span></p>
+                    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Conectamos experiencias únicas con audiencias apasionadas. Juntos, amplificamos el legado de tu marca.</p>
+                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#planes" class="bg-corporate-red text-white font-bold px-8 py-4 rounded-full hover:bg-red-800 transition text-lg shadow-2xl hover:shadow-red-500/40 transform hover:scale-105">Descubre tu Plan Ideal</a>
+                        <a href="https://wa.link/mj4nwu" target="_blank" class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-premium-dark transition text-lg transform hover:scale-105">Solicita tu asesoría gratuita</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Video -->
+        <section class="bg-premium-dark py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="section-title text-white">No solo lo decimos. <span class="gradient-text-red">Lo demostramos.</span></h2>
+                    <p class="mt-4 text-xl text-gray-400">Dale play y descubre en 90 segundos cómo podemos amplificar tu legado y conectar con tu audiencia de una manera que nunca imaginaste.</p>
+                </div>
+                <div x-data="{ playing: false }" class="mt-12 max-w-4xl mx-auto">
+                    <div class="video-wrapper rounded-2xl shadow-2xl border-4 border-gray-700">
+                        <template x-if="!playing">
+                            <div @click="playing = true" class="cursor-pointer">
+                                <img src="https://i.ytimg.com/vi/wv5yr9mzxPk/maxresdefault.jpg" alt="Video Thumbnail" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                    <div class="bg-corporate-red/80 rounded-full w-24 h-24 lg:w-32 lg:h-32 flex items-center justify-center animate-pulse-slow backdrop-blur-sm border-2 border-white/50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 lg:h-16 lg:w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template x-if="playing">
+                             <iframe src="https://www.youtube.com/embed/wv5yr9mzxPk?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Introducción -->
+        <section id="intro" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="section-title text-gray-900">Bienvenido a <span class="text-corporate-red">Raccord™</span>.</h2>
+                    <p class="mt-6 text-lg text-gray-600">Nos apasiona transformar la esencia de marcas como la tuya en historias digitales cautivadoras. Entendemos que tu visión merece ser amplificada de forma excepcional, y estamos aquí para convertirnos en el socio estratégico que lo haga realidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nuestros Servicios -->
+        <section id="servicios" class="py-16 md:py-24 bg-premium-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="section-title text-white">Nuestros <span class="gradient-text-red">Servicios</span></h2>
+                    <p class="mt-6 text-lg text-gray-300">Ofrecemos un ecosistema de soluciones digitales diseñadas para llevar tu marca al siguiente nivel.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Servicio 1: SEO y Búsqueda por Voz -->
+                    <div class="service-card bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700">
+                        <div class="bg-corporate-red text-white rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">SEO y Búsqueda por Voz</h3>
+                        <p class="mt-2 text-gray-400">Mejoramos tu visibilidad orgánica en Google y te preparamos para el futuro de las búsquedas conversacionales.</p>
+                    </div>
+                    <!-- Servicio 2: Publicidad Digital (PPC) -->
+                    <div class="service-card bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700">
+                        <div class="bg-corporate-red text-white rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Publicidad Digital (PPC)</h3>
+                        <p class="mt-2 text-gray-400">Gestionamos campañas en Google Ads y Meta Ads para maximizar tu ROI y llegar a tu audiencia ideal.</p>
+                    </div>
+                    <!-- Servicio 3: Marketing en Redes Sociales -->
+                    <div class="service-card bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700">
+                        <div class="bg-corporate-red text-white rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Marketing en Redes Sociales</h3>
+                        <p class="mt-2 text-gray-400">Construimos comunidades, generamos interacción y fortalecemos la presencia de tu marca en redes sociales.</p>
+                    </div>
+                    <!-- Servicio 4: Marketing de Contenidos -->
+                    <div class="service-card bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700">
+                        <div class="bg-corporate-red text-white rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Marketing de Contenidos</h3>
+                        <p class="mt-2 text-gray-400">Creamos contenido de valor (blogs, videos, ebooks) que posiciona tu marca como líder en la industria.</p>
+                    </div>
+                    <!-- Servicio 5: Diseño y Desarrollo Web -->
+                    <div class="service-card bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700">
+                        <div class="bg-corporate-red text-white rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Diseño y Desarrollo Web</h3>
+                        <p class="mt-2 text-gray-400">Diseñamos sitios web y landing pages optimizadas para la conversión, rápidas, seguras y 100% responsivas.</p>
+                    </div>
+                    <!-- Servicio 6: Marketing con IA -->
+                    <div class="service-card bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700">
+                        <div class="bg-corporate-red text-white rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Marketing con IA</h3>
+                        <p class="mt-2 text-gray-400">Utilizamos IA para análisis predictivo, personalización avanzada y optimización de campañas en tiempo real.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Quiénes Somos -->
+        <section id="quienes-somos" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <h2 class="section-title text-gray-900">El Conector Estratégico para <span class="text-corporate-red">Marcas Exclusivas</span></h2>
+                        <p class="mt-6 text-lg text-gray-600">En Raccord™, nos especializamos en ser el conector estratégico para empresas que ofrecen experiencias de lujo y servicios únicos. Transformamos su esencia en historias digitales irresistibles, diseñadas para atraer y cautivar a su público más selecto.</p>
+                        <p class="mt-4 text-lg text-gray-600">Somos el socio que necesitas para que tu marca no solo brille, sino que también atraiga a los visionarios que buscan lo excepcional y memorable.</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-2xl p-8 border">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-corporate-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <p class="mt-4 text-2xl font-bold text-gray-900">Conectando Experiencias, Amplificando Resultados.</p>
+                            <p class="mt-2 text-gray-600">Tu éxito es el nuestro. Juntos, creamos legados digitales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección de Planes -->
+        <section id="planes" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="section-title text-gray-900">Planes Diseñados para tu Crecimiento</h2>
+                    <p class="mt-4 text-xl text-gray-600">Comienza con uno de nuestros paquetes estratégicos o crea un plan 100% a tu medida en la siguiente sección.</p>
+                </div>
+
+                <div class="mt-16 grid lg:grid-cols-3 gap-8 items-start">
+                    <!-- Plan Impulso Digital -->
+                    <div x-data="{ open: '' }" class="plan-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 h-full flex flex-col">
+                        <div class="flex-grow">
+                            <span class="text-sm font-bold uppercase tracking-widest text-gray-500">Para Empezar</span>
+                            <h3 class="text-3xl font-bold mt-2 text-gray-900">Impulso Digital</h3>
+                            <!-- PRECIO: Actualiza el precio para el Plan Impulso Digital aquí -->
+                            <p class="text-4xl font-extrabold text-gray-800 mt-4">$2'790.000 <span class="text-lg font-medium text-gray-500">/mes</span></p>
+                            
+                            <div class="mt-6 space-y-2">
+                                <!-- Acordeón -->
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'bene1' ? '' : 'bene1')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Beneficios Clave<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'bene1'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'bene1'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Presencia en redes sociales</li><li>Contenido básico mensual</li><li>Análisis de competencia</li><li>Soporte por WhatsApp</li></ul></div>
+                                </div>
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'app1' ? '' : 'app1')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Aplicación<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'app1'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'app1'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><p>Ideal para nuevos negocios que necesitan establecer su marca en el mundo digital y atraer sus primeros aliados.</p></div>
+                                </div>
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'res1' ? '' : 'res1')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Resultados Esperados<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'res1'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'res1'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Marca reconocible y profesional</li><li>Aumento del 30% en seguidores</li><li>Primeras conversiones online</li></ul></div>
+                                </div>
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'cond1' ? '' : 'cond1')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Términos y Condiciones<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'cond1'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'cond1'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Duración mínima de contrato: 3 meses</li><li>Pago mensual anticipado</li><li>Revisiones incluidas: 2 por mes</li><li>Tiempo de respuesta: 24-48 horas</li></ul></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contacto" class="mt-8 block w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-300 transition">Elegir Plan</a>
+                    </div>
+
+                    <!-- Plan Crecimiento Acelerado (Premium) -->
+                    <div x-data="{ open: '' }" class="plan-card bg-premium-dark text-white p-8 rounded-2xl shadow-2xl border-2 border-premium-gold relative lg:scale-110 z-10 h-full flex flex-col">
+                        <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
+                            <span class="bg-premium-gold text-premium-dark text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">Recomendado</span>
+                        </div>
+                        <div class="flex-grow">
+                            <span class="text-sm font-bold uppercase tracking-widest text-gray-400">Expansión de Negocio</span>
+                            <h3 class="text-3xl font-bold mt-2 text-white">Crecimiento Acelerado</h3>
+                            <!-- PRECIO: Actualiza el precio para el Plan Crecimiento Acelerado aquí -->
+                            <p class="text-4xl font-extrabold text-premium-gold mt-4">$6'350.286 <span class="text-lg font-medium text-gray-400">/mes</span></p>
+
+                            <div class="mt-6 space-y-2">
+                                <!-- Acordeón -->
+                                <div class="border-b border-gray-600">
+                                    <button @click="open = (open === 'bene2' ? '' : 'bene2')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-white">Beneficios Clave<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'bene2'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'bene2'" x-transition x-cloak class="pb-3 text-gray-300 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Estrategia de marketing estándar</li><li>Campañas publicitarias pagadas</li><li>Creación de identidad de marca</li><li>Análisis avanzado de datos</li><li>Funnel de ventas optimizado</li></ul></div>
+                                </div>
+                                <div class="border-b border-gray-600">
+                                    <button @click="open = (open === 'app2' ? '' : 'app2')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-white">Aplicación<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'app2'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'app2'" x-transition x-cloak class="pb-3 text-gray-300 text-sm"><p>Perfecto para negocios establecidos que quieren aumentar sus ventas, llegar a más prospectos y dominar su mercado.</p></div>
+                                </div>
+                                <div class="border-b border-gray-600">
+                                    <button @click="open = (open === 'res2' ? '' : 'res2')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-white">Resultados Esperados<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'res2'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'res2'" x-transition x-cloak class="pb-3 text-gray-300 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Incremento del 50% en leads</li><li>Mayor engagement en redes</li><li>ROI positivo en publicidad</li><li>Base de datos de prospectos creciente</li></ul></div>
+                                </div>
+                                <div class="border-b border-gray-600">
+                                    <button @click="open = (open === 'cond2' ? '' : 'cond2')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-white">Términos y Condiciones<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'cond2'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'cond2'" x-transition x-cloak class="pb-3 text-gray-300 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Duración mínima del contrato: 6 meses</li><li>Pago mensual anticipado</li><li>Revisiones incluidas: 3 por mes</li><li>Tiempo de respuesta: 12-24 horas</li><li>Presupuesto publicitario no incluido</li></ul></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contacto" class="mt-8 block w-full text-center bg-corporate-red text-white font-semibold py-3 rounded-lg hover:bg-red-800 transition shadow-lg hover:shadow-red-500/50">Elegir Plan</a>
+                    </div>
+                    
+                    <!-- Plan Liderazgo Total -->
+                    <div x-data="{ open: '' }" class="plan-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 h-full flex flex-col">
+                        <div class="flex-grow">
+                            <span class="text-sm font-bold uppercase tracking-widest text-gray-500">Consolidación Corporativa</span>
+                            <h3 class="text-3xl font-bold mt-2 text-gray-900">Liderazgo Total</h3>
+                            <!-- PRECIO: Actualiza el precio para el Plan Liderazgo Total aquí -->
+                            <p class="text-4xl font-extrabold text-gray-800 mt-4">$11'975.429 <span class="text-lg font-medium text-gray-500">/mes</span></p>
+
+                            <div class="mt-6 space-y-2">
+                                <!-- Acordeón -->
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'bene3' ? '' : 'bene3')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Beneficios Clave<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'bene3'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'bene3'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Estrategia de marketing completa</li><li>Automatización avanzada y CRM</li><li>Consultoría estratégica mensual</li><li>Equipo dedicado y Account Manager</li><li>SEO y marketing de contenidos</li></ul></div>
+                                </div>
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'app3' ? '' : 'app3')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Aplicación<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'app3'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'app3'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><p>Diseñado para empresas consolidadas que buscan liderar su industria, optimizar procesos y maximizar su crecimiento digital.</p></div>
+                                </div>
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'res3' ? '' : 'res3')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Resultados Esperados<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'res3'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'res3'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Crecimiento del 80% en conversiones</li><li>Posicionamiento como líder del sector</li><li>Procesos de marketing automatizados</li><li>ROI superior y escalable</li></ul></div>
+                                </div>
+                                <div class="border-b border-gray-200">
+                                    <button @click="open = (open === 'cond3' ? '' : 'cond3')" class="w-full flex justify-between items-center py-3 text-left font-semibold text-gray-800">Términos y Condiciones<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" :class="{'rotate-180': open === 'cond3'}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>
+                                    <div x-show="open === 'cond3'" x-transition x-cloak class="pb-3 text-gray-600 text-sm"><ul class="list-disc list-inside space-y-1 pl-2"><li>Duración mínima del contrato: 12 meses</li><li>Pago mensual o trimestral</li><li>Revisiones ilimitadas</li><li>Tiempo de respuesta: 2-6 horas</li><li>Presupuesto publicitario no incluido</li></ul></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contacto" class="mt-8 block w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-300 transition">Elegir Plan</a>
+                    </div>
+                </div>
+
+                <!-- Matriz de Comparación -->
+                <div class="mt-20">
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Comparación Detallada de Planes</h3>
+                    <div class="overflow-x-auto bg-white rounded-lg shadow-xl border">
+                        <table class="w-full text-sm text-left text-gray-700">
+                            <thead class="bg-gray-50 text-xs text-gray-700 uppercase">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Característica</th>
+                                    <th scope="col" class="px-6 py-3 text-center">Impulso Digital</th>
+                                    <th scope="col" class="px-6 py-3 text-center bg-premium-gold/10">Crecimiento Acelerado</th>
+                                    <th scope="col" class="px-6 py-3 text-center">Liderazgo Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b"><td class="px-6 py-4 font-bold text-gray-900 bg-gray-50" colspan="4">Estrategia</td></tr>
+                                <tr class="border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Diagnóstico Estratégico</td>
+                                    <td class="px-6 py-4 text-center">Estándar</td>
+                                    <td class="px-6 py-4 text-center font-bold text-premium-dark">Optimizado</td>
+                                    <td class="px-6 py-4 text-center">Premium</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Plan Editorial & Guía de Estilo</td>
+                                    <td class="px-6 py-4 text-center table-cross font-bold">✕</td>
+                                    <td class="px-6 py-4 text-center table-check font-bold">✓</td>
+                                    <td class="px-6 py-4 text-center table-check font-bold">✓</td>
+                                </tr>
+
+                                <tr class="border-b"><td class="px-6 py-4 font-bold text-gray-900 bg-gray-50" colspan="4">Contenido y Redes</td></tr>
+                                <tr class="border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Redes Sociales Incluidas</td>
+                                    <td class="px-6 py-4 text-center">Instagram</td>
+                                    <td class="px-6 py-4 text-center">Instagram, Facebook, TikTok</td>
+                                    <td class="px-6 py-4 text-center">Instagram, Facebook, TikTok, Google Business, Web</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Contenido Mensual</td>
+                                    <td class="px-6 py-4 text-center">6 img, 2 reels, 8 hist.</td>
+                                    <td class="px-6 py-4 text-center">12 img, 4 reels, 12 hist.</td>
+                                    <td class="px-6 py-4 text-center">16 img, 8 reels, 20 hist.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Gestión de Campañas (Ads)</td>
+                                    <td class="px-6 py-4 text-center table-cross font-bold">✕</td>
+                                    <td class="px-6 py-4 text-center table-check font-bold">✓</td>
+                                    <td class="px-6 py-4 text-center table-check font-bold">✓</td>
+                                </tr>
+
+                                <tr class="border-b"><td class="px-6 py-4 font-bold text-gray-900 bg-gray-50" colspan="4">Gestión y Reportes</td></tr>
+                                <tr class="border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Reporte de Contenido</td>
+                                    <td class="px-6 py-4 text-center">Mensual</td>
+                                    <td class="px-6 py-4 text-center">Quincenal</td>
+                                    <td class="px-6 py-4 text-center">Semanal</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Automatización de Procesos</td>
+                                    <td class="px-6 py-4 text-center">Básica</td>
+                                    <td class="px-6 py-4 text-center">Mejorada</td>
+                                    <td class="px-6 py-4 text-center">Avanzada</td>
+                                </tr>
+                                
+                                <tr class="border-b"><td class="px-6 py-4 font-bold text-gray-900 bg-gray-50" colspan="4">Servicios Premium</td></tr>
+                                 <tr class="border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Manual de Legado</td>
+                                    <td class="px-6 py-4 text-center table-cross font-bold">✕</td>
+                                    <td class="px-6 py-4 text-center table-cross font-bold">✕</td>
+                                    <td class="px-6 py-4 text-center table-check font-bold">✓</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Auditoría y Selección de Socios</td>
+                                    <td class="px-6 py-4 text-center table-cross font-bold">✕</td>
+                                    <td class="px-6 py-4 text-center table-check font-bold">✓</td>
+                                    <td class="px-6 py-4 text-center table-check font-bold">✓</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Plan Personalizado -->
+        <section id="personaliza" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="section-title text-gray-900">Crea tu Plan <span class="text-corporate-red">a la Medida</span></h2>
+                    <p class="mt-4 text-xl text-gray-600">¿No encuentras el plan perfecto? No hay problema. Responde estas sencillas preguntas para construir un paquete que se adapte 100% a tus necesidades.</p>
+                </div>
+
+                <div x-data="{
+                    step: 1,
+                    plan: {
+                        tipoNegocio: '',
+                        objetivo: '',
+                        servicios: [],
+                        posts: 10,
+                        reels: 4,
+                        stories: 15
+                    },
+                    serviciosDisponibles: [
+                        'Gestión de Redes Sociales (Instagram, Facebook)',
+                        'Publicidad Pagada (Meta Ads)',
+                        'Email Marketing & Automatización',
+                        'Fotografía y Video Profesional',
+                        'Gestión de Google My Business',
+                        'Diseño Gráfico y Branding',
+                        'Marketing de Influencers',
+                        'Desarrollo Web y Landing Pages'
+                    ],
+                    calculatePrice() {
+                        // LÓGICA DE PRECIOS: Ajusta estos valores para cambiar la estimación de precios.
+                        let basePrice = 2000000; // Precio base inicial
+                        let objectivePrice = 0;
+                        if (this.plan.objetivo === 'Aumentar Reservas/Ventas') objectivePrice = 800000;
+                        if (this.plan.objetivo === 'Generar Leads') objectivePrice = 600000;
+                        if (this.plan.objetivo === 'Mejorar Branding') objectivePrice = 400000;
+                        if (this.plan.objetivo === 'Fidelizar Clientes') objectivePrice = 500000;
+
+                        const servicesPrice = this.plan.servicios.length * 1200000; // Precio por cada servicio adicional
+                        const postsPrice = this.plan.posts * 80000; // Precio por post/imagen
+                        const reelsPrice = this.plan.reels * 350000; // Precio por reel/video
+                        const storiesPrice = this.plan.stories * 40000; // Precio por historia
+
+                        const totalPrice = basePrice + objectivePrice + servicesPrice + postsPrice + reelsPrice + storiesPrice;
+                        
+                        return totalPrice.toLocaleString('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 });
+                    }
+                }" class="mt-16 max-w-4xl mx-auto bg-gray-50 rounded-2xl shadow-xl border p-8">
+                    
+                    <!-- Barra de Progreso -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center">
+                            <template x-for="i in 5" :key="i">
+                                <div class="w-full text-center">
+                                    <div class="w-8 h-8 rounded-full mx-auto flex items-center justify-center font-bold transition-colors" :class="step >= i ? 'step-active' : 'step-inactive'"><span x-text="i"></span></div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Paso 1: Tipo de Negocio -->
+                    <div x-show="step === 1" x-transition>
+                        <h3 class="text-xl font-bold text-gray-900">Paso 1: Cuéntanos sobre tu negocio</h3>
+                        <p class="text-gray-600 mt-2">Selecciona el tipo de negocio que mejor te describe.</p>
+                        <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <button @click="plan.tipoNegocio = 'Hotel'; step = 2" class="p-4 rounded-lg border-2 text-left font-semibold transition" :class="plan.tipoNegocio === 'Hotel' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">🏨 Hotel</button>
+                            <button @click="plan.tipoNegocio = 'Spa'; step = 2" class="p-4 rounded-lg border-2 text-left font-semibold transition" :class="plan.tipoNegocio === 'Spa' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">💆‍♀️ Spa</button>
+                            <button @click="plan.tipoNegocio = 'Restaurante'; step = 2" class="p-4 rounded-lg border-2 text-left font-semibold transition" :class="plan.tipoNegocio === 'Restaurante' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">🍽️ Restaurante</button>
+                            <button @click="plan.tipoNegocio = 'Centro Vacacional'; step = 2" class="p-4 rounded-lg border-2 text-left font-semibold transition" :class="plan.tipoNegocio === 'Centro Vacacional' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">🏝️ Centro Vacacional</button>
+                            <button @click="plan.tipoNegocio = 'Centro de Experiencias'; step = 2" class="p-4 rounded-lg border-2 text-left font-semibold transition" :class="plan.tipoNegocio === 'Centro de Experiencias' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">🎢 Centro de Experiencias</button>
+                            <button @click="plan.tipoNegocio = 'Otro'; step = 2" class="p-4 rounded-lg border-2 text-left font-semibold transition" :class="plan.tipoNegocio === 'Otro' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">✨ Otro</button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Objetivo Principal -->
+                    <div x-show="step === 2" x-transition x-cloak>
+                        <h3 class="text-xl font-bold text-gray-900">Paso 2: ¿Cuál es tu objetivo principal?</h3>
+                        <p class="text-gray-600 mt-2">Esto nos ayudará a enfocar la estrategia.</p>
+                        <div class="mt-6 space-y-3">
+                            <button @click="plan.objetivo = 'Aumentar Reservas/Ventas'; step = 3" class="w-full text-left p-4 rounded-lg border-2 font-semibold transition" :class="plan.objetivo === 'Aumentar Reservas/Ventas' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">Aumentar mis reservas o ventas directas.</button>
+                            <button @click="plan.objetivo = 'Generar Leads'; step = 3" class="w-full text-left p-4 rounded-lg border-2 font-semibold transition" :class="plan.objetivo === 'Generar Leads' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">Generar prospectos de calidad para mi equipo.</button>
+                            <button @click="plan.objetivo = 'Mejorar Branding'; step = 3" class="w-full text-left p-4 rounded-lg border-2 font-semibold transition" :class="plan.objetivo === 'Mejorar Branding' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">Mejorar el reconocimiento y posicionamiento de mi marca.</button>
+                            <button @click="plan.objetivo = 'Fidelizar Clientes'; step = 3" class="w-full text-left p-4 rounded-lg border-2 font-semibold transition" :class="plan.objetivo === 'Fidelizar Clientes' ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">Fidelizar a mis aliados actuales y aumentar la recurrencia.</button>
+                        </div>
+                        <button @click="step = 1" class="mt-6 text-sm text-gray-600 hover:text-corporate-red">&larr; Volver</button>
+                    </div>
+
+                    <!-- Paso 3: Servicios -->
+                    <div x-show="step === 3" x-transition x-cloak>
+                        <h3 class="text-xl font-bold text-gray-900">Paso 3: Elige los servicios que necesitas</h3>
+                        <p class="text-gray-600 mt-2">Puedes seleccionar tantos como quieras.</p>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <template x-for="servicio in serviciosDisponibles" :key="servicio">
+                                <label class="flex items-center p-3 rounded-lg border-2 cursor-pointer transition" :class="plan.servicios.includes(servicio) ? 'border-corporate-red bg-red-50' : 'border-gray-200 hover:border-corporate-red'">
+                                    <input type="checkbox" :value="servicio" x-model="plan.servicios" class="h-5 w-5 rounded text-corporate-red focus:ring-corporate-red">
+                                    <span class="ml-3 font-semibold" x-text="servicio"></span>
+                                </label>
+                            </template>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <button @click="step = 2" class="text-sm text-gray-600 hover:text-corporate-red">&larr; Volver</button>
+                            <button @click="step = 4" class="bg-corporate-red text-white font-semibold px-6 py-2 rounded-lg hover:bg-red-800 transition">Siguiente &rarr;</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Paso 4: Volumen de Contenido -->
+                    <div x-show="step === 4" x-transition x-cloak>
+                        <h3 class="text-xl font-bold text-gray-900">Paso 4: Define el volumen de contenido mensual</h3>
+                        <p class="text-gray-600 mt-2">Ajusta la cantidad de publicaciones según tus necesidades.</p>
+                        <div class="mt-6 space-y-6">
+                            <div>
+                                <label for="posts" class="font-semibold text-gray-800">Imágenes / Posts (<span x-text="plan.posts"></span>)</label>
+                                <input id="posts" type="range" min="0" max="30" step="1" x-model="plan.posts" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-corporate-red">
+                            </div>
+                            <div>
+                                <label for="reels" class="font-semibold text-gray-800">Reels / Videos Cortos (<span x-text="plan.reels"></span>)</label>
+                                <input id="reels" type="range" min="0" max="15" step="1" x-model="plan.reels" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-corporate-red">
+                            </div>
+                            <div>
+                                <label for="stories" class="font-semibold text-gray-800">Historias (<span x-text="plan.stories"></span>)</label>
+                                <input id="stories" type="range" min="0" max="50" step="5" x-model="plan.stories" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-corporate-red">
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-between items-center">
+                            <button @click="step = 3" class="text-sm text-gray-600 hover:text-corporate-red">&larr; Volver</button>
+                            <button @click="step = 5" class="bg-corporate-red text-white font-semibold px-6 py-2 rounded-lg hover:bg-red-800 transition">Calcular Estimación &rarr;</button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 5: Resumen -->
+                    <div x-show="step === 5" x-transition x-cloak>
+                        <h3 class="text-2xl font-bold text-center text-gray-900">¡Perfecto! Este es tu Plan a la Medida</h3>
+                        <div class="mt-6 bg-white border border-gray-200 rounded-lg p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-bold text-lg text-corporate-red">Resumen de tu Plan</h4>
+                                    <div class="mt-4 space-y-4 text-sm">
+                                        <div><p class="text-gray-500">Tipo de Negocio:</p><p class="font-semibold text-gray-800" x-text="plan.tipoNegocio || 'No especificado'"></p></div>
+                                        <div><p class="text-gray-500">Objetivo Principal:</p><p class="font-semibold text-gray-800" x-text="plan.objetivo || 'No especificado'"></p></div>
+                                        <div><p class="text-gray-500">Contenido Mensual:</p><p class="font-semibold text-gray-800"><span x-text="plan.posts"></span> Posts, <span x-text="plan.reels"></span> Reels, <span x-text="plan.stories"></span> Historias</p></div>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4">
+                                    <h4 class="font-bold text-lg text-corporate-red">Servicios Seleccionados</h4>
+                                    <ul class="list-disc list-inside mt-2 space-y-1 text-sm">
+                                        <template x-for="servicio in plan.servicios" :key="servicio"><li class="font-semibold text-gray-800" x-text="servicio"></li></template>
+                                        <li x-show="plan.servicios.length === 0" class="text-gray-500 italic">Ningún servicio adicional.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center bg-premium-dark text-white rounded-lg p-6">
+                                <p class="text-lg text-gray-300">Estimación Mensual Aproximada</p>
+                                <p class="text-4xl font-extrabold text-premium-gold mt-2" x-text="calculatePrice()"></p>
+                                <p class="text-xs text-gray-400 mt-2">*Este valor es una estimación y puede variar. La cotización final será enviada por un agente.</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex flex-col items-center gap-4">
+                            <a href="https://wa.me/573196807176?text=Hola,%20quisiera%20una%20cotizaci%C3%B3n%20formal%20para%20mi%20plan%20a%20medida." target="_blank" class="w-full md:w-auto text-center bg-corporate-red text-white font-bold px-8 py-3 rounded-lg hover:bg-red-800 transition shadow-lg">Solicitar Cotización por WhatsApp</a>
+                            <button @click="step = 1; plan = { tipoNegocio: '', objetivo: '', servicios: [], posts: 10, reels: 4, stories: 15 }" class="text-sm text-gray-600 hover:text-corporate-red">Empezar de nuevo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Gamificación/Beneficios -->
+        <section id="gamificacion" class="py-16 md:py-24 gamification-bg text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="section-title text-white">🚀 Programa Digital Champions</h2>
+                    <p class="mt-4 text-xl text-gray-300">Creemos en celebrar cada victoria. Con nosotros, tu crecimiento no solo se mide en métricas, ¡también en recompensas!</p>
+                </div>
+
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Nivel Bronce -->
+                    <div class="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-gray-600">
+                        <div class="flex items-center mb-4"><div class="text-4xl mr-4">🥉</div><div><h4 class="font-bold text-xl">INICIADOR DIGITAL</h4><p class="text-sm text-gray-400">Nivel Bronce</p></div></div>
+                        <h5 class="font-semibold mb-2">🎯 Requisitos:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>1,000 vistas, 100 interacciones, 50 seguidores</li></ul>
+                        <h5 class="font-semibold mb-2 mt-4">🏆 Recompensas:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>Kit de bienvenida digital, Plantillas de posts</li></ul>
+                    </div>
+                    <!-- Nivel Plata -->
+                    <div class="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-gray-600">
+                        <div class="flex items-center mb-4"><div class="text-4xl mr-4">🥈</div><div><h4 class="font-bold text-xl">EXPLORADOR DE MARCA</h4><p class="text-sm text-gray-400">Nivel Plata</p></div></div>
+                        <h5 class="font-semibold mb-2">🎯 Requisitos:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>5,000 vistas, 500 interacciones, 200 seguidores</li></ul>
+                        <h5 class="font-semibold mb-2 mt-4">🏆 Recompensas:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>Sesión de estrategia (1h), Pack de 20 stories</li></ul>
+                    </div>
+                    <!-- Nivel Oro -->
+                    <div class="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-gray-600">
+                        <div class="flex items-center mb-4"><div class="text-4xl mr-4">🥇</div><div><h4 class="font-bold text-xl">CONQUISTADOR ONLINE</h4><p class="text-sm text-gray-400">Nivel Oro</p></div></div>
+                        <h5 class="font-semibold mb-2">🎯 Requisitos:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>10,000 vistas, 1,000 interacciones, 5 ventas/leads</li></ul>
+                        <h5 class="font-semibold mb-2 mt-4">🏆 Recompensas:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>Campaña publicitaria gratuita ($100), Video promocional</li></ul>
+                    </div>
+                    <!-- Nivel Platino -->
+                    <div class="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-gray-600">
+                        <div class="flex items-center mb-4"><div class="text-4xl mr-4">💎</div><div><h4 class="font-bold text-xl">LÍDER PREMIUM</h4><p class="text-sm text-gray-400">Nivel Platino</p></div></div>
+                        <h5 class="font-semibold mb-2">🎯 Requisitos:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>25,000 vistas, 2,500 interacciones, Engagement >4%</li></ul>
+                        <h5 class="font-semibold mb-2 mt-4">🏆 Recompensas:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>Consultoría ejecutiva (2h), Landing page profesional</li></ul>
+                    </div>
+                    <!-- Nivel Diamante -->
+                    <div class="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-gray-600">
+                        <div class="flex items-center mb-4"><div class="text-4xl mr-4">💠</div><div><h4 class="font-bold text-xl">DOMINIO DIGITAL</h4><p class="text-sm text-gray-400">Nivel Diamante</p></div></div>
+                        <h5 class="font-semibold mb-2">🎯 Requisitos:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>50,000 vistas, 5,000 interacciones, ROI >300%</li></ul>
+                        <h5 class="font-semibold mb-2 mt-4">🏆 Recompensas:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>Mes de servicio gratuito, Producción audiovisual</li></ul>
+                    </div>
+                    <!-- Nivel Maestro -->
+                    <div class="bg-black/20 backdrop-blur-md p-6 rounded-2xl border-2 border-premium-gold">
+                        <div class="flex items-center mb-4"><div class="text-4xl mr-4">👑</div><div><h4 class="font-bold text-xl text-premium-gold">MAESTRO LEGEND</h4><p class="text-sm text-gray-400">Nivel Legendario</p></div></div>
+                        <h5 class="font-semibold mb-2">🎯 Requisitos:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>100,000+ vistas, 10,000+ interacciones, Líder de industria</li></ul>
+                        <h5 class="font-semibold mb-2 mt-4">🏆 Recompensas:</h5><ul class="text-sm space-y-1 list-disc list-inside text-gray-300"><li>3 meses de servicio gratuito, Trofeo físico, Membresía VIP</li></ul>
+                    </div>
+                </div>
+                
+                <!-- Bonus Section -->
+                <div class="mt-16 pt-10 border-t border-gray-600">
+                    <h3 class="text-2xl font-bold text-center text-white">Bonificaciones Especiales</h3>
+                    <p class="text-center text-gray-300 mt-2">Logros adicionales que puedes desbloquear en cualquier momento.</p>
+                    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-gray-900/50 p-5 rounded-lg text-center"><h4 class="font-bold text-lg">🔥 Viral Master</h4><p class="text-sm text-gray-400 mt-1">Post con +10,000 vistas.<br><strong>Premio:</strong> Análisis viral + Pack de contenido.</p></div>
+                        <div class="bg-gray-900/50 p-5 rounded-lg text-center"><h4 class="font-bold text-lg">💬 Community Builder</h4><p class="text-sm text-gray-400 mt-1">+100 comentarios en un post.<br><strong>Premio:</strong> Estrategia de comunidad.</p></div>
+                        <div class="bg-gray-900/50 p-5 rounded-lg text-center"><h4 class="font-bold text-lg">📈 Growth Hacker</h4><p class="text-sm text-gray-400 mt-1">Crecimiento del 50% mensual.<br><strong>Premio:</strong> Consultoría de crecimiento.</p></div>
+                        <div class="bg-gray-900/50 p-5 rounded-lg text-center"><h4 class="font-bold text-lg">🎨 Brand Innovator</h4><p class="text-sm text-gray-400 mt-1">Campaña creativa destacada.<br><strong>Premio:</strong> Sesión de branding premium.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="section-title text-gray-900">¿Listo para amplificar tu marca?</h2>
+                 <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Hablemos de cómo podemos llevar tu visión al siguiente nivel. Conviértete en nuestro próximo <strong class="font-semibold text-corporate-red">caso de éxito</strong>.</p>
+                 <div class="mt-10">
+                    <!-- CONTACTO: Enlace de WhatsApp para la sección de contacto -->
+                    <a href="https://wa.me/573196807176?text=Hola,%20estoy%20interesado%20en%20los%20servicios%20de%20Raccord." target="_blank" class="bg-corporate-red text-white font-bold px-8 py-4 rounded-full hover:bg-red-800 transition text-lg shadow-lg inline-block transform hover:scale-105">Iniciar Conversación por WhatsApp</a>
+                 </div>
+                 <p class="mt-6 text-gray-500">Haz clic en el botón para contactarnos directamente.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-400">
+            <div class="container mx-auto px-6 py-8 text-center">
+                <p>&copy; 2024 Raccord™. Todos los derechos reservados.</p>
+                <p class="text-sm text-gray-500 mt-2">Conectando Experiencias, Amplificando Resultados.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Botón de Contacto Flotante para Móvil -->
+    <a href="https://wa.me/573196807176?text=Hola,%20estoy%20interesado%20en%20los%20servicios%20de%20Raccord." target="_blank" class="md:hidden fixed bottom-5 right-5 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition transform hover:scale-110 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.89-5.451 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l.001.004l-1.141 4.155l4.27-1.124z m11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+</body>
+</html>
